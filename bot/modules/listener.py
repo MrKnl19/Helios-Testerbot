@@ -280,7 +280,7 @@ class MirrorLeechListener:
             msg += f'\n<b>Total Files: </b>{folders}'
             if typ != 0:
                 msg += f'\n<b>Corrupted Files: </b>{typ}'
-            msg += f'\n<b>cc: </b>{self.tag}\n\n'
+            msg += f'\n<b>#Mirrored cc: </b>{self.tag}\n\n'
             if not files:
                 sendMessage(msg, self.bot, self.message)
             else:
@@ -315,7 +315,7 @@ class MirrorLeechListener:
                 msg += f'\n<b>SubFolders: </b>{folders}'
                 msg += f'\n<b>Files: </b>{files}'
             buttons = ButtonMaker()
-            msg += f'\n\n<b>cc: </b>{self.tag}'
+            msg += f'\n\n<b>#Mirrored cc: </b>{self.tag}'
             buttons.buildbutton("☁️ Drive Link", link)
             LOGGER.info(f'Done Uploading {name}')
             if INDEX_URL is not None:
